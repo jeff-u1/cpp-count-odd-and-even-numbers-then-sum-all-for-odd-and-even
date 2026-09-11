@@ -1,4 +1,4 @@
-//v1
+//v2
 #include <iostream>
 #define ll long long int
 using namespace std;
@@ -12,7 +12,12 @@ public:
 int main()
 {
     fiveofive sunflower;
+    cout << "enter any negative numbers to quit";
     for (;;) {
+        if (sunflower.sum_even > 0 || sunflower.sum_odd > 0) {
+            sunflower.sum_odd = 0;
+            sunflower.sum_even = 0;
+        }
         cout << "\nhow many number to calc?: ";
         cin >> sunflower.count;
         if (sunflower.count <= 0) {
@@ -47,4 +52,3 @@ int main()
     }
     return 0;
 }
-    
