@@ -1,4 +1,4 @@
-//v2
+// v3
 #include <iostream>
 #define ll long long int
 using namespace std;
@@ -7,17 +7,14 @@ class fiveofive
 {
 public:
     ll count=0;
-    int sum_even=0, sum_odd=0;
+    ll sum_even=0, sum_odd=0;
 };
 int main()
 {
     fiveofive sunflower;
     cout << "enter any negative numbers to quit";
     for (;;) {
-        if (sunflower.sum_even > 0 || sunflower.sum_odd > 0) {
-            sunflower.sum_odd = 0;
-            sunflower.sum_even = 0;
-        }
+        sunflower.sum_odd = 0, sunflower.sum_even = 0;
         cout << "\nhow many number to calc?: ";
         cin >> sunflower.count;
         if (sunflower.count <= 0) {
@@ -25,14 +22,14 @@ int main()
             break;
         }
 
-        for (int i = 1; i <= sunflower.count; i++) {
+        for (ll i = 1; i <= sunflower.count; i++) {
             cout << " " << i;
         }
         cout << '\n';
 
         cout << "\nodd number: ";
 
-        for (int i = 1; i <= sunflower.count; i++) {
+        for (ll i = 1; i <= sunflower.count; i++) {
             if (i % 2 != 0) {
                 sunflower.sum_odd += i;
                 cout << i << " ";
@@ -40,7 +37,7 @@ int main()
         }
         cout << '\n';
         cout << "\neven number: ";
-        for (int j = 1; j <= sunflower.count; j++) {
+        for (ll j = 1; j <= sunflower.count; j++) {
             if (j % 2 == 0) {
                 sunflower.sum_even += j;
                 cout << j << " ";
